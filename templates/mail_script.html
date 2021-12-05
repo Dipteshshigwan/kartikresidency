@@ -1,0 +1,21 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <a href="after_index">Visit W3Schools!</a>
+    {%for text in texts%}
+        {% csrf_token %}
+        <p>{{text}}</p>
+    {% endfor %}
+</body>
+</html> 
